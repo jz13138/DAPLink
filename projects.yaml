@@ -622,6 +622,16 @@ projects:
         - *module_if
         - *module_hic_stm32f103xb
         - records/board/ublox_evk_odin_w2.yaml
+    
+    m251SG6AE_DAPLINK_if:
+        - *module_if
+        - *module_hic_stm32f103xb
+        - records/board/DAPLINK_m251SG6AE.yaml
+    
+    m251SE3AE_DAPLINK_if:
+        - *module_if
+        - *module_hic_stm32f103xb
+        - records/board/DAPLINK_m251SE3AE.yaml
 
 
     # Test projects

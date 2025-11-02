@@ -36,20 +36,41 @@ COMPILER_ASSERT(DAPLINK_HIC_ID == DAPLINK_HIC_ID_STM32F103XB);
 #define USB_CONNECT_ON()             (USB_CONNECT_PORT->BSRR = USB_CONNECT_PIN)
 #define USB_CONNECT_OFF()            (USB_CONNECT_PORT->BRR  = USB_CONNECT_PIN)
 
+
 //Connected LED
+
+// works for cheap Aliexpress DAPLINK
+// Board: NUCLEO-L4XXZX
+// Ref: MB1312
 #define CONNECTED_LED_PORT           GPIOC
 #define CONNECTED_LED_PIN            GPIO_PIN_15
 #define CONNECTED_LED_PIN_Bit        15
+
+
+
+
 
 //When bootloader, disable the target port(not used)
 #define POWER_EN_PIN_PORT            GPIOB
 #define POWER_EN_PIN                 GPIO_PIN_15
 #define POWER_EN_Bit                 15
 
+
 // nRESET OUT Pin
+// works for cheap Aliexpress DAPLINK
+// Board: NUCLEO-L4XXZX
+// Ref: MB1312
 #define nRESET_PIN_PORT              GPIOA
 #define nRESET_PIN                   GPIO_PIN_8
 #define nRESET_PIN_Bit               8
+// works for ST-Link_V2-1
+// Board: NUCLEO-L4XXZX
+// Ref: MB1312
+//#define nRESET_PORT           GPIOB
+//#define nRESET_PIN            GPIO_PIN_0
+//#define nRESET_PIN_Bit        0
+
+
 
 //SWD
 #define SWCLK_TCK_PIN_PORT           GPIOB
@@ -66,6 +87,11 @@ COMPILER_ASSERT(DAPLINK_HIC_ID == DAPLINK_HIC_ID_STM32F103XB);
 
 //LEDs
 //USB status LED
+
+// works for cheap Aliexpress DAPLINK
+// Board: NUCLEO-L4XXZX
+// Ref: MB1312
+
 #define RUNNING_LED_PORT             GPIOA
 #define RUNNING_LED_PIN              GPIO_PIN_1
 #define RUNNING_LED_Bit              1
@@ -82,5 +108,21 @@ COMPILER_ASSERT(DAPLINK_HIC_ID == DAPLINK_HIC_ID_STM32F103XB);
 #define PIN_MSC_LED                  GPIO_PIN_1
 #define PIN_MSC_LED_Bit              1
 
+// works for ST-Link_V2-1
+// Board: NUCLEO-L4XXZX
+// Ref: MB1312
+//#define RUNNING_LED_PORT_PORT           GPIOA
+//#define RUNNING_LED_PORT_PIN            GPIO_PIN_9
+//#define RUNNING_LED_PORT_PIN_Bit        9
+//#define PIN_HID_LED_PORT             GPIOA
+//#define PIN_HID_LED                  GPIO_PIN_9
+//#define PIN_HID_LED_Bit              9
 
+//#define PIN_CDC_LED_PORT             GPIOA
+//#define PIN_CDC_LED                  GPIO_PIN_9
+//#define PIN_CDC_LED_Bit              9
+
+//#define PIN_MSC_LED_PORT             GPIOA
+//#define PIN_MSC_LED                  GPIO_PIN_9
+//#define PIN_MSC_LED_Bit              9
 #endif

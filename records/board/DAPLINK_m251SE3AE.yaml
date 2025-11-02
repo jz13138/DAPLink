@@ -1,0 +1,8 @@
+common:
+    macros:
+        - USB_PROD_STR="Nuvoton M251SE3AE CMSIS-DAP"
+    sources:
+        board:
+            - source/board/DAPLINK_m251SE3AE.c
+        family:
+            - source/family/nuvoton/m251se3ae/target.c
