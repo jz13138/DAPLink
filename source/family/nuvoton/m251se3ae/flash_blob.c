@@ -108,7 +108,7 @@ static const uint32_t M251_LD_4_flash_prog_blob[] = {
     0x00899203, 0xf24c5840, 0xf2c40184, 0x60080100, 0xf24ce7ff, 0xf2c400c0, 0x68000000, 0x420821c0,
     0xe7ffd001, 0x9804e7f5, 0x1c4a9903, 0x00899203, 0xf24c5840, 0xf2c40188, 0x60080100, 0x99039804,
     0x92031c4a, 0x58400089, 0x018cf24c, 0x0100f2c4, 0x98066008, 0x90063810, 0xe7ffe7b5, 0x0010f24c,
-    0x0000f2c4,S 0x21016800, 0xd0014208, 0xe7f5e7ff, 0xb0082000, 0xb5b0bdb0, 0x4613b087, 0x4605460c,
+    0x0000f2c4, 0x21016800, 0xd0014208, 0xe7f5e7ff, 0xb0082000, 0xb5b0bdb0, 0x4613b087, 0x4605460c,
     0x91049005, 0x98049203, 0x21031cc0, 0x90044388, 0x94019302, 0xe7ff9500, 0x0010f24c, 0x0000f2c4,
     0x21016800, 0xd0014208, 0xe7f5e7ff, 0x0000f24c, 0x0000f2c4, 0x22406801, 0x60014311, 0x000cf24c,
     0x0000f2c4, 0x60012121, 0x9804e7ff, 0xd0402800, 0x9805e7ff, 0x43882103, 0x0104f24c, 0x0100f2c4,
@@ -139,7 +139,7 @@ static const sector_info_t sectors_info[] = {
     { 0x00100000, 0x00000200 },
 };
 
-static const program_target_t M251_AP_256_flash = {
+static const program_target_t M251_AP_32_flash = {
     0x20000021, // Init
     0x200000d7, // UnInit
     0x0,        // EraseChip
@@ -158,8 +158,8 @@ static const program_target_t M251_AP_256_flash = {
 
     0x20000000 + 0x00000A00,  // mem buffer location
     0x20000000,               // location to write prog_blob in target RAM
-    sizeof(M251_AP_256_flash_prog_blob),   // prog_blob size
-    M251_AP_256_flash_prog_blob,           // address of prog_blob
+    sizeof(M251_AP_32_flash_prog_blob),   // prog_blob size
+    M251_AP_32_flash_prog_blob,           // address of prog_blob
     0x00000200       // ram_to_flash_bytes_to_be_written
 };
 
