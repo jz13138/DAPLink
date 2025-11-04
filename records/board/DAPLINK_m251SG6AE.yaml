@@ -1,6 +1,6 @@
 common:
     macros:
-        - USB_PROD_STR="Nuvoton M251SG6AE CMSIS-DAP"
+        - USB_PROD_STR="M251SG6AE CMSIS-DAP"
     sources:
         board:
             - source/board/DAPLINK_m251SG6AE.c

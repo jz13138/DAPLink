@@ -29,5 +29,5 @@ const board_info_t g_board_info = {
     .flags       = kEnablePageErase,
     .target_cfg  = &target_device,
     .board_vendor = "Nuvoton",
-    .board_name = "DAPLINK_m251SG6AE",
+    .board_name = "DAPLINK m251SG6AE",
 };
