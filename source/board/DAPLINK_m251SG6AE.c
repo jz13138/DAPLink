@@ -19,6 +19,8 @@
  * limitations under the License.
  */
 
+#include "IO_Config.h"
+#include "DAP.h"
 #include "target_family.h"
 #include "target_board.h"
 
