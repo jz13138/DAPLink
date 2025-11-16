@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 static const uint32_t M251_AP_256_flash_prog_blob[] = {
     0xE00ABE00, 0x062D780D, 0x24084068, 0xD3000040, 0x1E644058, 0x1C49D1FA, 0x2A001E52, 0x4770D1F2,
     0xb088b5b0, 0x460c4613, 0x90064605, 0x92049105, 0x90032064, 0x1000f240, 0x0000f2c4, 0x60012159,
@@ -133,6 +132,8 @@ static const uint32_t M251_LD_4_flash_prog_blob[] = {
     0x90051d00, 0x1d009803, 0x98049003, 0x90041f00, 0x2000e7af, 0xe7ff9006, 0xb0079806, 0x0000bdb0,
     0x00000000
 };
+
+
 
 /**
 * List of start and size for each size of flash sector - even indexes are start, odd are size

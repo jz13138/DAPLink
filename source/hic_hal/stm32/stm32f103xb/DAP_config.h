@@ -113,7 +113,7 @@ This information includes:
 
 /// Indicate that UART Communication Port is available.
 /// This information is returned by the command \ref DAP_Info as part of <b>Capabilities</b>.
-#define DAP_UART                1               ///< DAP UART:  1 = available, 0 = not available.
+#define DAP_UART                0               ///< DAP UART:  1 = available, 0 = not available.
 
 /// USART Driver instance number for the UART Communication Port.
 #define DAP_UART_DRIVER         0               ///< USART Driver instance number (Driver_USART#).
@@ -424,7 +424,7 @@ __STATIC_FORCEINLINE void PIN_nTRST_OUT(uint32_t bit)
 */
 __STATIC_FORCEINLINE uint32_t PIN_nRESET_IN(void)
 {
-    return ((nRESET_PIN_PORT->IDR >> nRESET_PIN_Bit) & 1);
+    return ((nRESET_IN_PIN_PORT->IDR >> nRESET_IN_PIN_Bit) & 1);
 }
 
 /** nRESET I/O pin: Set Output.
@@ -535,6 +535,7 @@ __STATIC_INLINE void DAP_SETUP(void)
     SWDIO_OUT_PIN_PORT->BSRR = SWDIO_OUT_PIN;
 
     pin_in_init(SWDIO_IN_PIN_PORT, SWDIO_IN_PIN_Bit, 1);
+    pin_in_init(nRESET_IN_PIN_PORT, nRESET_IN_PIN_Bit, 1);
 
     pin_out_od_init(nRESET_PIN_PORT, nRESET_PIN_Bit);
     nRESET_PIN_PORT->BSRR = nRESET_PIN;
